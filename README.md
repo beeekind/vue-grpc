@@ -1,4 +1,4 @@
-## A working demo for A SPA with Vue.js and gRPC courtesy of gRPC-web.
+## A working demo for a SPA with Vue.js and gRPC courtesy of gRPC-web.
 
 ## installation
 
@@ -6,6 +6,6 @@
 git clone github.com/b3ntly/vue-grpc
 cd vue-grpc
 yarn install
-./scripts/installprotobuf.sh 
+./scripts/install_protobuf.sh && ./scripts/get_go_deps
 npm run start
 ```
