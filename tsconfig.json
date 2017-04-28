@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "types": [
+      "node"
+    ],
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "target": "es6",
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "stripInternal": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true,
+    "experimentalDecorators": true
+  }
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package notes;
+
+message Note {
+    int64 id = 1;
+    string body = 2;
+    string author = 3;
+}
+
+message AddNoteRequest {
+    string body = 1;
+    string author = 2;
+}
+
+message GetNotesRequest {}
+
+message GetNotesResponse {
+    repeated Note notes = 1;
+}
+
+message DeleteNoteRequest {
+    int64 id = 1;
+}
+
+service NoteService {
+    rpc AddNote(AddNoteRequest) returns (Note){}
+    rpc GetNotes(GetNotesRequest) returns (GetNotesResponse){}
+    rpc DeleteNote(DeleteNoteRequest) returns (Note){}
+}

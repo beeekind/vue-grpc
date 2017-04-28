@@ -1,0 +1,6 @@
+div
+    p {{ host }}
+        ul
+            li("v-for"="note in notes")
+                span {{ note.body}} - {{ note.author }}
+                button("@click.native"="deleteNote(note.id)") delete
