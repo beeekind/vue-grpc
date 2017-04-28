@@ -1,7 +1,5 @@
 import {grpc, BrowserHeaders} from "grpc-web-client";
 import {NoteService} from "./_proto/notes_service_pb_service";
-
-//
 import {Note, GetNotesRequest, GetNotesResponse, AddNoteRequest, DeleteNoteRequest} from "./_proto/notes_service_pb";
 
 import { Component } from 'vue-typed'
@@ -13,10 +11,10 @@ const template = require('./app.jade')();
 	template
 })
 class App extends Vue {
-    host = 'http://localhost:9090';
     notes: Array<Note> = [];
-    body: '';
-    author: '';
+    host: string = 'http://localhost:9090';
+    body: string =  '';
+    author: string = '';
 
     mounted(){
         this.getNotes();
@@ -73,8 +71,8 @@ class App extends Vue {
             request: request,
 
             onMessage: (note: Note) => {
-                let noteIndex = this.notes.indexOf(note);
-                if (noteIndex !== -1) delete this.notes[noteIndex];
+                this.notes = this.notes.filter(n => n.getId() !== note.getId());
+                console.log(this.notes.length);
                 console.log("Successfully deleted, ", note);
             },
 

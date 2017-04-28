@@ -1,6 +1,17 @@
-div
-    p {{ host }}
-        ul
-            li("v-for"="note in notes")
-                span {{ note.body}} - {{ note.author }}
-                button("@click.native"="deleteNote(note.id)") delete
+div.container
+    .card
+        .card-block
+            form
+                .form-group
+                    input.form-control("v-model"="author", placeholder="Author")
+
+                .form-group
+                    input.form-control("v-model"="body", placeholder="Note")
+
+                button("@click"="addNote()").btn.btn-default Add Note
+
+    .card("v-for"="note in notes")
+        .card-block
+            .card-title {{ note.getAuthor() }}
+            .card-text {{ note.getBody() }}
+            a.card-link("@click"="deleteNote(note.getId())") delete

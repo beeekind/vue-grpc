@@ -1,0 +1,12 @@
+.card {
+    padding: 15px;
+    background-color: white;
+    margin: 15px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
