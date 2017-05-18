@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJ_ROOT=${GOPATH}/src/github.com/b3ntly/vue-grpc
+PROJ_ROOT="$(dirname "$(dirname "$(readlink "$0")")")"
 
 mkdir -p ${PROJ_ROOT}/server/_proto
 mkdir -p ${PROJ_ROOT}/client/_proto
