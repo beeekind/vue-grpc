@@ -1,5 +1,7 @@
 ## A working demo for a SPA with Vue.js and gRPC courtesy of gRPC-web.
 
+![Screenshot](./screenshot.png)
+
 ## installation
 
 ```bash
