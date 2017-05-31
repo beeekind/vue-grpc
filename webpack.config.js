@@ -42,7 +42,7 @@ var config = {
             { test: /\.jade$/, loader: 'jade-loader' },
             {
                 test: /\.ts?$/,
-                include: /src/,
+                include: /client/,
                 exclude: /node_modules/,
                 loader: "ts-loader"
             }
